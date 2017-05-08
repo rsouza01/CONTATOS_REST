@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="AGENDA" Class="AgendaDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=VVCEPHEI\SQLEXPRESS;Initial Catalog=AGENDA;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="AGENDAConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ESTADOS" Member="ESTADOs">
+    <Type Name="ESTADO">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DESCRICAO" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SIGLA" Type="System.String" DbType="Char(2) NOT NULL" CanBeNull="false" />
+      <Association Name="ESTADO_CONTATO" Member="CONTATOs" ThisKey="ID" OtherKey="ESTADOID" Type="CONTATO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CONTATOS" Member="CONTATOs">
+    <Type Name="CONTATO">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOME" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ENDERECO" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="COMPLEMENTO" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BAIRRO" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MUNICIPIO" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ESTADOID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CEP" Type="System.String" DbType="Char(8) NOT NULL" CanBeNull="false" />
+      <Column Name="TELEFONE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="ESTADO_CONTATO" Member="ESTADO" ThisKey="ESTADOID" OtherKey="ID" Type="ESTADO" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

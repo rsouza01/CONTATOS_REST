@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html ng-app="smApp">
+<head>
+    <title>Advaned AngularJS Dialog</title>    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    
+    <link rel="stylesheet" href="/Content/bootstrap-3.3.7/css/bootstrap.css" />
+    <link rel="stylesheet" href="/ngExDialog/ngExDialog.css">
+    <link rel="stylesheet" href="/Content/Site.css" />
+    
+    <script src="/Scripts/Libs/angular_1.5.8.js"></script>   
+    <script src="/Scripts/Libs/angular-route.js"></script>    
+</head>
+<body ng-controller="bodyController">
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Advanced AngularJs Dialog</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#main"><i class="glyphicon glyphicon-home"></i>  Main Samples </a></li>
+                <li><a href="#second"><i class="glyphicon glyphicon-book"></i> Second Page </a></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="main">
+        <!-- Content will be injected here -->
+        <div ng-view></div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted">@SPA Angular 1.5x with TypeScript and Components</p>
+        </div>
+    </footer>
+    <script src="/Scripts/app.js"></script>
+    <script src="/Scripts/controllers.js"></script>
+    <script src="/Scripts/secondSampleComponent.js"></script>
+    <script src="/Scripts/dataServices.js"></script>
+    <script src="/ngExDialog/ngExDialog.js"></script>    
+</body>
+</html>

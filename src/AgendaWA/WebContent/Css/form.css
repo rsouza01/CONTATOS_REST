@@ -1,0 +1,44 @@
+﻿.cssTitulo {
+    height: 60px;
+    background-color: #E0E0E0;
+    width: 100%;
+    position: relative;
+    margin: 0px 0px 4px 0px;
+
+    background-position: 10px 5px;
+    background-repeat: no-repeat;
+}
+
+
+input.txt {
+color: #00008B;
+background-color: #E3F2F7;
+border: 1px inset #00008B;
+width: 200px;
+}
+input.btn {
+color: #00008B;
+background-color: #ADD8E6;
+border: 1px outset #00008B;
+}
+form div {
+clear: left;
+margin: 0;
+padding: 0;
+padding-top: 5px;
+}
+form div label {
+float: left;
+width: 100px;
+font: bold 0.9em Arial, Helvetica, sans-serif;
+}
+fieldset {
+border: 1px dotted #61B5CF;
+margin-top: 1.4em;
+padding: 0.6em;
+}
+legend {
+font: bold 0.8em Arial, Helvetica, sans-serif;
+color: #00008B;
+background-color: #FFFFFF;
+}

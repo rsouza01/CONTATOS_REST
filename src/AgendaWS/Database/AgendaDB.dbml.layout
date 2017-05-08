@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="AgendaDB">
+  <DataContextMoniker Name="/AgendaDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="43b4cdd7-6a5d-41d3-beff-85493c510ab1" absoluteBounds="0.75, 1.5, 2, 1.3862939453125003">
+      <DataClassMoniker Name="/AgendaDBDataContext/ESTADO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="526c4a60-4c2f-406c-b494-bff1be572941" absoluteBounds="0.765, 1.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ef60987f-dd07-4de8-a881-eba4dc2fa3e2" absoluteBounds="3.5, 1, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/AgendaDBDataContext/CONTATO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b7c57064-16cb-4e34-9441-00bbadbde503" absoluteBounds="3.515, 1.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 2.19314697265625); (3.5 : 2.19314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AgendaDBDataContext/ESTADO/ESTADO_CONTATO" />
+      <nodes>
+        <classShapeMoniker Id="43b4cdd7-6a5d-41d3-beff-85493c510ab1" />
+        <classShapeMoniker Id="ef60987f-dd07-4de8-a881-eba4dc2fa3e2" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

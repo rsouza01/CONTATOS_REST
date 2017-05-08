@@ -1,0 +1,23 @@
+﻿<div class="cssContatoRecord">
+    <!-- Each Order will have a header bar, with Order ID and date. -->
+    <div class="cssContatoHeader">
+        <div class="cssContatoID">Id # {{selectedContato.id}}</div>
+        <div class="cssContatoNome">Nome: {{selectedContato.nome}}</div>
+    </div>
+
+    <div class="cssContatosDetalhe">
+        <div class="cssContatoEndereco">Endereço: {{selectedContato.endereco}}</div>
+        <div class="cssContatoComplemento">Complemento: {{selectedContato.complemento}}</div>
+        <div class="cssContatoBairro">Bairro: {{selectedContato.bairro}}</div>
+        <div class="cssContatoMunicipio">Município: {{selectedContato.municipio}}</div>
+        <div class="cssContatoCEP">CEP: {{selectedContato.cep}}</div>
+        <div class="cssContatoTelefone">Telefone: {{selectedContato.telefone}}</div>
+        <div class="cssContatoEstado">Estado: {{selectedContato.estado.descricao}}</div>
+        <span style="color:Red;">{{errorMessage}}</span>
+    </div>
+    <div>
+        <a href="#add" class="btn btn-xs btn-primary" style="min-width:70px;"><span class="glyphicon glyphicon-plus "></span>&nbsp;novo</a>
+        <a href="#delete" class="btn btn-xs btn-danger" ng-click="deleteContato()"><span class="glyphicon glyphicon-trash"></span>&nbsp;excluir</a>
+        <a href="#edit" class="btn btn-xs btn-primary" style="min-width:70px;"><span class="glyphicon glyphicon-pencil "></span>&nbsp;editar</a>
+    </div>
+</div>

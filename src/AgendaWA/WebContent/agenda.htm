@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<!--[if lte IE 9]>
+<script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.0/jquery.xdomainrequest.min.js'></script>
+<![endif]-->
+
+<html xmlns="http://www.w3.org/1999/xhtml"  ng-app='agendaApp'>
+<head>
+    <title>AGENDA</title>
+    <script src="Scripts/jquery-1.4.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+
+    <script src="Scripts/AgendaCtrl.js"></script>
+
+    <link rel="stylesheet" href="Vendors/bootstrap/css/bootstrap.min.css" />
+    <link href="Css/form.css" rel="stylesheet" />
+    <link rel="stylesheet" href="Css/agenda.css" />
+</head>
+<body>
+        <div id="divMasterDetailWrapper" ng-controller='AgendaCtrl' style="position:relative;">
+            <div style="left:-30px;top:-1px;position:absolute;">
+                <img src="Images/tabContatos.png" />
+            </div>
+
+            <!-- First, we have our left-hand list of Customer names --> 
+            <div id="divMasterView">
+                <div id="{{selectedContato.id}}" class="cssOneContatoRecord" 
+                    ng-class="{cssContatoSelectedRecord: Contato.id == selectedContato.id}" 
+                    ng-repeat='Contato in listaContatos' ng-click="selectContato(Contato);">
+                    <div class="cssCompanyName">{{Contato.nome}}</div>
+                    <div class="cssCompanyCity">{{Contato.municipio}}</div>
+                    <div class="cssCustomerID">{{Contato.id}}</div>
+                    <img src='./Images/icnOffice.png' title="{{Contato.nome}}" class="cssCustomerIcon" />
+                </div>
+            </div>
+
+            <!-- Then, we have our right-hand panel, showing one Customer's orders --> 
+            <div ng-view id="divDetailView">
+            </div>
+        </div>
+</body>
+</html>

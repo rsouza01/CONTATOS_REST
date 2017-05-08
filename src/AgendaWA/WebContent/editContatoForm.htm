@@ -1,0 +1,54 @@
+﻿<div>
+    <h3 class="cssTitulo">Editar Contato</h3>
+</div>
+<form name="userFormTwo" novalidate>
+    <ng-form name="userFieldForm">
+        <fieldset>
+
+            <div>
+                <label for="nome">Id:</label>
+                <input type="text" name="nome" id="nome" class="txt" style='width: 300px;' ng-model="selectedContato.id" readonly />
+            </div>
+            <div>
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome" class="txt" style='width: 300px;' ng-model="selectedContato.nome" required />
+            </div>
+            <div>
+                <label for="endereco">Endereço:</label>
+                <input type="text" name="endereco" id="endereco" class="txt" style='width: 300px;' ng-model="selectedContato.endereco" required />
+            </div>
+            <div>
+                <label for="complemento">Complemento:</label>
+                <input type="text" name="complemento" id="complemento" class="txt" style='width: 300px;' ng-model="novoContato.complemento" />
+            </div>
+            <div>
+                <label for="bairro">Bairro :</label>
+                <input type="text" name="bairro" id="bairro" class="txt" style='width: 150px;' ng-model="selectedContato.bairro" required />
+            </div>
+            <div>
+                <label for="municipio">Município :</label>
+                <input type="text" name="municipio" id="municipio" class="txt" style='width: 150px;' ng-model="selectedContato.municipio" required />
+            </div>
+            <div>
+                <label for="cep">CEP :</label>
+                <input type="text" name="cep" id="cep" class="txt" style='width: 75px;' ng-model="selectedContato.cep" required />
+            </div>
+            <div>
+                <label for="telefone">Telefone :</label>
+                <input type="text" name="telefone" id="telefone" class="txt" style='width: 75px;' ng-model="selectedContato.telefone" required />
+            </div>
+            <div>
+                <label for="estado">Estado :</label>
+                <select class="txt" style='width: 150px;'>
+                    <option ng-repeat="estado in estados" value="{{estado.id}}" ng-model="selectedContato.estado.id">{{estado.descricao}}</option>
+                </select>
+            </div>
+        </fieldset>
+
+    </ng-form>
+    <div>
+        <button ng-click="salvarContato()" class="btn btn-xs btn-primary" style="min-width:70px;">&nbsp;salvar</button>
+        <button ng-click="deleteContato()" class="btn btn-xs btn-primary" style="min-width:70px;">&nbsp;excluir</button>
+    </div>
+
+</form>
